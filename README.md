@@ -3,7 +3,7 @@
     https://github.com/harshshahu/SonarQube-And-SonarScanner-Installation-on-EC2.git
   
 2️⃣ Follow all steps to install SonarQube and SonarScanner on EC2:
-    After installation Login to EC2 and install python, pip, flask, nodejs, java, maven (if not installed).
+    After installation Login to EC2 and install python, pip, flask, nodejs, java, maven, pip install pytest-cov (if not installed).
 
 3️⃣ URL: http://<EC2-PUBLIC-IP>:9000 (Default sonarQube link):
     Default credentials: admin/admin
@@ -31,28 +31,35 @@
 6️⃣ Git Clone Repository on EC2:  
     git clone https://github.com/harshshahu/SonarQube-Run-on-EC2-Manually.git
 
-    
-7️⃣ Run Applications
-    *Python Application
-        cd python-app
-        pip install -r requirements.txt
-        python hello.py
-        pytest test_hello.py
-    
-    *Java Application
-        cd java-app
+
+7️⃣ First we will run Java, Python, NodeJS code manually:
+    cd SonarQube-Run-on-EC2-Manually
+    Java:
+    cd java-app/
+    now to run java application type:
+        javac HelloWorkld.java
+        java HelloWorkld.java
+        or
         mvn clean compile
         mvn exec:java -Dexec.mainClass="com.example.HelloWorld"
         mvn test
-        
-    *Node.js Application
-        cd nodejs-app
-        npm install
+        you will see Output in console.
+    Python:
+    cd python-app/
+    now to run python application type:
+        pip install -r requirements.txt
+        python hello.py
+        pytest test_hello.py
+        you will see Output in console.
+    NodeJs:
+    cd nodejs-app/
+    now to run NodeJs application type:
         node index.js
         npm test
+        you will see Output in console.
 
-        
-8️⃣ Analyze Code with SonarQube
+
+8️⃣ Now we will analyze code with SonarQube:  
     Option 1: Analyze All Applications at Once
         chmod +x analyze-all.sh
         ./analyze-all.sh
