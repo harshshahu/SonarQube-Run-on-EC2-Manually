@@ -1,11 +1,11 @@
 # SonarQube-Run-on-EC2-Manually
-1️⃣ Clone the below reository:
+1️⃣ Clone the below reository and install SonarQube and SonarScanner on your EC2:
     https://github.com/harshshahu/SonarQube-And-SonarScanner-Installation-on-EC2.git
   
 2️⃣ Follow all steps to install SonarQube and SonarScanner on EC2.
     After installation Login to EC2 and install python, pip, flask, nodejs, java, maven (if not installed).
 
-3️⃣ URL: http://<EC2-PUBLIC-IP>:9000
+3️⃣ URL: http://<EC2-PUBLIC-IP>:9000 (Default sonarQube link)
     Default credentials: admin/admin
     Change password on first login
 
@@ -18,6 +18,8 @@
 
 5️⃣ Configure Environment Variables
     copy and export on your EC2:
+    Login to your EC2 and type below:
+    
     export SONAR_HOST_URL=http://<EC2-PUBLIC-IP>:9000
     export SONAR_TOKEN=<your-sonarQube-generated-token>
 
